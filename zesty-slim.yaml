@@ -1,0 +1,24 @@
+image: oneimage/ubuntu:zesty-slim
+manifests:
+  -
+    image: multiarch/ubuntu-debootstrap:arm64-zesty-slim
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:armhf-zesty-slim
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:amd64-zesty-slim
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:i386-zesty-slim
+    platform:
+      architecture: 386
+      os: linux

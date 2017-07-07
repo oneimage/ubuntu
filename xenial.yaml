@@ -1,0 +1,24 @@
+image: oneimage/ubuntu:xenial
+manifests:
+  -
+    image: multiarch/ubuntu-debootstrap:arm64-xenial
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:armhf-xenial
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:amd64-xenial
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:i386-xenial
+    platform:
+      architecture: 386
+      os: linux

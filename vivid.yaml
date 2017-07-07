@@ -1,0 +1,24 @@
+image: oneimage/ubuntu:vivid
+manifests:
+  -
+    image: multiarch/ubuntu-debootstrap:arm64-vivid
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:armhf-vivid
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:amd64-vivid
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:i386-vivid
+    platform:
+      architecture: 386
+      os: linux

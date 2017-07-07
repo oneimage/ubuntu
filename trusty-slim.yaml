@@ -1,0 +1,24 @@
+image: oneimage/ubuntu:trusty-slim
+manifests:
+  -
+    image: multiarch/ubuntu-debootstrap:arm64-trusty-slim
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:armhf-trusty-slim
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:amd64-trusty-slim
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:i386-trusty-slim
+    platform:
+      architecture: 386
+      os: linux

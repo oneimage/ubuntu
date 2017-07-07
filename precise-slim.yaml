@@ -1,0 +1,19 @@
+image: oneimage/ubuntu:precise-slim
+manifests:
+  -
+    image: multiarch/ubuntu-debootstrap:armhf-precise-slim
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:amd64-precise-slim
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux
+  -
+    image: multiarch/ubuntu-debootstrap:i386-precise-slim
+    platform:
+      architecture: 386
+      os: linux
