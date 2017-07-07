@@ -36,7 +36,7 @@ Unified Ubuntu docker images for multiple architectures.
 
 ## running
 
-Any hosts running the supported architectures listed above can simply run the follwing command. The correct image for your host architecture will be provided seamlessly. 
+Any hosts running the supported architectures listed above can simply run the following command. The correct image for your host architecture will be provided seamlessly. 
 
 ```
 docker run -it oneimage/ubuntu:latest bash
